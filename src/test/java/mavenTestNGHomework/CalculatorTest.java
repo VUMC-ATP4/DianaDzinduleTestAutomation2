@@ -21,7 +21,7 @@ public class CalculatorTest {
 
         @Test
         public void testSum() {
-            System.out.println("Saskaitīšana");
+            System.out.println("Saskaitīšana.");
             Calculator calculator = new Calculator();
             int actualResult = calculator.addition(15, 5);
             int expectedResult = 20;
@@ -30,22 +30,25 @@ public class CalculatorTest {
 
         @AfterTest
         public void pecTestaViens() {
-            System.out.println("Šī bija saskaitīšana");
+            System.out.println("Šī bija saskaitīšana.");
         }
 
         @Test
         public void testSubtraction() {
-            System.out.println("Atņemšana");
+            System.out.println("Atņemšana.");
             Calculator calculator = new Calculator();
             int actualResult = calculator.subtraction(15, 5);
             int expectedResult = 10;
             Assert.assertEquals(actualResult, expectedResult);
         }
-
+        @AfterTest
+        public void pecPirmaTesta() {
+            System.out.println("Šī bija atņemšana.");
+        }
 
         @Test
         public void testMultiply() {
-            System.out.println("Reizināšana");
+            System.out.println("Reizināšana.");
             Calculator calculator = new Calculator();
             int actualResult = calculator.multiply(15, 3);
             int expectedResult = 45;
@@ -59,7 +62,7 @@ public class CalculatorTest {
 
         @Test
         public void testDivision() {
-            System.out.println("Dalīšana");
+            System.out.println("Dalīšana.");
             Calculator calculator = new Calculator();
             float actualResult = calculator.divide(15, 3);
             float expectedResult = 5;
